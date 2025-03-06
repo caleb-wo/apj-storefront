@@ -7,10 +7,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0dd7ed9c-4274-41c8-9072-b5e3eee873be" name="Changes" comment="Did prove.">
-      <change afterPath="$PROJECT_DIR$/tutorial9-1/src/main/java/edu/byui/apj/storefront/animalservice/controller/AnimalController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tutorial9-1/src/main/java/edu/byui/apj/storefront/animalservice/model/Animal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tutorial9-1/src/main/java/edu/byui/apj/storefront/animalservice/service/AnimalService.java" afterDir="false" />
+    <list default="true" id="0dd7ed9c-4274-41c8-9072-b5e3eee873be" name="Changes" comment="Completed tutorial9-1">
+      <change afterPath="$PROJECT_DIR$/tutorial9-2/src/main/java/edu/byui/apj/storefront/tutorial92/controller/AnimalClientController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tutorial9-2/src/main/java/edu/byui/apj/storefront/tutorial92/model/Animal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tutorial9-2/src/main/java/edu/byui/apj/storefront/tutorial92/service/AnimalClientService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -23,6 +23,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="module-info" />
         <option value="Class" />
       </list>
     </option>
@@ -62,13 +63,14 @@
     "Spring Boot.Tutorial81Application.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
+    "last_directory_selection": "/Users/calebwolfe/Desktop/BYUI/APJ/apj-storefront/tutorial9-2/src/test/java/edu/byui/apj/storefront/tutorial92",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -83,6 +85,61 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.Tutorial81Application">
+    <configuration default="true" type="AZURE_FUNCTION_SUPPORT" factoryName="Run Functions">
+      <option name="appName" />
+      <option name="appServicePlanName" />
+      <option name="appServicePlanResourceGroup" />
+      <option name="appSettingsKey" value="20431e0d-47f2-45fc-80de-95e918b7655c" />
+      <option name="artifact" />
+      <option name="debugOptions" />
+      <option name="deployment" />
+      <option name="deploymentStagingDirectoryPath" />
+      <option name="funcPath" />
+      <option name="functionHostArguments" />
+      <option name="hostJsonPath" />
+      <option name="insightsName" />
+      <option name="instrumentationKey" />
+      <option name="javaVersion" />
+      <option name="localSettingsJsonPath" />
+      <option name="moduleName" />
+      <option name="os" />
+      <option name="pricingTier" />
+      <option name="providerMap">
+        <map />
+      </option>
+      <option name="region" />
+      <option name="resourceGroup" />
+      <option name="stagingFolder" />
+      <option name="subscription" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="tutorial9-1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="tutorial9-1" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+    <configuration name="AnimalClientApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="tutorial9-2" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="edu.byui.apj.storefront.tutorial92.AnimalClientApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AnimalClientApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="tutorial9-2" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="edu.byui.apj.storefront.tutorial92.AnimalClientApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AnimalServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="tutorial9-1" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="edu.byui.apj.storefront.animalservice.AnimalServiceApplication" />
@@ -124,7 +181,10 @@
       <updated>1741031234466</updated>
       <workItem from="1741031236040" duration="1761000" />
       <workItem from="1741033058649" duration="197000" />
-      <workItem from="1741038465590" duration="1241000" />
+      <workItem from="1741038465590" duration="1405000" />
+      <workItem from="1741210954035" duration="1746000" />
+      <workItem from="1741222147935" duration="311000" />
+      <workItem from="1741224635813" duration="2213000" />
     </task>
     <task id="LOCAL-00001" summary="Did prove.">
       <option name="closed" value="true" />
@@ -142,7 +202,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741033250164</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Completed tutorial9-1">
+      <option name="closed" value="true" />
+      <created>1741041109656</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1741041109656</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,6 +218,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Did prove." />
-    <option name="LAST_COMMIT_MESSAGE" value="Did prove." />
+    <MESSAGE value="Completed tutorial9-1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed tutorial9-1" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
