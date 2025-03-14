@@ -1,7 +1,8 @@
-package edu.byui.apj.storefront.api.controller;
+package edu.byui.apj.storefront.web.controller;
 
-import edu.byui.apj.storefront.api.model.TradingCard;
-import edu.byui.apj.storefront.api.service.TradingCardService;
+import edu.byui.apj.storefront.web.service.TradingCardClientService;
+import edu.byui.apj.storefront.web.model.TradingCard;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,19 +14,19 @@ import java.util.List;
 
 @Controller
 public class TradingCardController {
-    private final TradingCardService tradingCardService;
+    private final TradingCardClientService tradingCardClientService;
 
     @Autowired
-    public TradingCardController(TradingCardService tradingCardService) {
-        this.tradingCardService = tradingCardService;
+    public TradingCardController(TradingCardClientService tradingCardClientService) {
+        this.tradingCardClientService = tradingCardClientService;
     }
 
     @GetMapping("/api/cards")
     public List<TradingCard> getCards(
-             Model model
+            Model model
             ,@RequestParam(defaultValue = "0") int page
             ,@RequestParam(defaultValue = "20") int size) {
-        return tradingCardService.getCards( page, size ).getContent();
+        return tradingCardClientService.getAllCardsPaginated( page, size );
     }
 
     @GetMapping( "/api/cards/filter" )
@@ -35,5 +36,6 @@ public class TradingCardController {
             , @RequestParam(required = false) BigDecimal maxPrice
             , @RequestParam(required = false) String specialty
             , @RequestParam(required = false) String sort
-    ){ return tradingCardService.getFilteredCards(minPrice, maxPrice, specialty, sort); }
+    ){ return tradingCardClientService.filterAndSort(minPrice, maxPrice, specialty, sort); }
 }
+

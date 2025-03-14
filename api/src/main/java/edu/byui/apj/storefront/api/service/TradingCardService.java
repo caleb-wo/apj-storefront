@@ -11,40 +11,69 @@ import org.springframework.data.domain.PageRequest;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
 import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.math.BigDecimal;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
 
-
+@Service
 public class TradingCardService {
-    public List<TradingCard> tradingCards;
-    {
-        List<TradingCard> tradingCards = new ArrayList<>();
+    private List<TradingCard> tradingCards = new ArrayList<>();
+
+    public TradingCardService() {
         try {
             ClassPathResource pioneers = new ClassPathResource("pioneers.csv");
-            Reader reader = new InputStreamReader(pioneers.getInputStream());
-            Iterable<CSVRecord> cards = CSVFormat.DEFAULT.withFirstRecordAsHeader().parse(reader);
-
-            for (CSVRecord card : cards ) {
-                tradingCards.add(new TradingCard(
-                         Long.parseLong(card.get("id"))
-                        ,card.get("name")
-                        ,card.get("specialty")
-                        ,card.get("contribution")
-                        ,BigDecimal.valueOf(Long.parseLong(card.get("price")))
-                        ,card.get("imageUrl")
-                ));
-                this.tradingCards = tradingCards;
+            if (pioneers.exists()) {
+                loadCardsFromCSV(pioneers);
+            } else {
+                System.err.println("Warning: pioneers.csv not found in classpath");
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            System.err.println("Error loading trading cards: " + e.getMessage());
         }
     }
+
+    private void loadCardsFromCSV(ClassPathResource resource) throws IOException {
+        try (Reader reader = new InputStreamReader(resource.getInputStream(), StandardCharsets.UTF_8)) {
+            Iterable<CSVRecord> cards = CSVFormat.DEFAULT.withFirstRecordAsHeader().parse(reader);
+
+            for (CSVRecord card : cards) {
+                try {
+                    Long id = Long.parseLong(card.get("ID"));
+                    String name = card.get("Name");
+                    String specialty = card.get("Specialty");
+                    String contribution = card.get("Contribution");
+
+                    BigDecimal price;
+                    try {
+                        price = new BigDecimal(card.get("Price"));
+                    } catch (NumberFormatException e) {
+                        System.err.println("Invalid price format for card ID " + id + ": " + card.get("Price"));
+                        price = BigDecimal.ZERO;
+                    }
+
+                    String imageUrl = card.get("ImageUrl");
+
+                    tradingCards.add(new TradingCard(id, name, specialty, contribution, price, imageUrl));
+                } catch (Exception e) {
+                    System.err.println("Error processing card record: " + e.getMessage());
+                }
+            }
+
+            System.out.println("Successfully loaded " + tradingCards.size() + " cards");
+        }
+    }
+
+
+
+
+
     private Comparator<TradingCard> getComparator(String sort) {
         if ("name".equalsIgnoreCase(sort)) {
             return Comparator.comparing(TradingCard::getName);
@@ -70,19 +99,18 @@ public class TradingCardService {
         List<TradingCard> paginatedCards = tradingCards.subList(start, end);
         return new PageImpl<>(paginatedCards, pageable, tradingCards.size());
     }
-    public List<TradingCard> getFilteredCards( BigDecimal minPrice, BigDecimal maxPrice, String specialty, String sort) {
+
+    public List<TradingCard> getFilteredCards(BigDecimal minPrice, BigDecimal maxPrice, String specialty, String sort) {
+        BigDecimal effectiveMinPrice = (minPrice != null) ? minPrice : BigDecimal.ZERO;
+        BigDecimal effectiveMaxPrice = (maxPrice != null) ? maxPrice : new BigDecimal("999999999"); // Some large value
+
         List<TradingCard> filteredCards = tradingCards.stream()
-                .filter(card -> card.getPrice().compareTo(minPrice) >= 0)
-                .filter(card -> card.getPrice().compareTo(maxPrice) <= 0)
-                .filter(card-> specialty == null || card.getSpecialty().equalsIgnoreCase(specialty))
+                .filter(card -> card.getPrice().compareTo(effectiveMinPrice) >= 0)
+                .filter(card -> card.getPrice().compareTo(effectiveMaxPrice) <= 0)
+                .filter(card -> specialty == null || card.getSpecialty().equalsIgnoreCase(specialty))
                 .sorted(getComparator(sort))
                 .collect(Collectors.toList());
 
-        if ("name".equalsIgnoreCase(sort)) {
-            filteredCards.sort(Comparator.comparing(TradingCard::getName));
-        } else if ("price".equalsIgnoreCase(sort)) {
-            filteredCards.sort(Comparator.comparing(TradingCard::getPrice));
-        }
         return filteredCards;
     }
 

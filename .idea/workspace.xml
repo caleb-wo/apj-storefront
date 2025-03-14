@@ -7,15 +7,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0dd7ed9c-4274-41c8-9072-b5e3eee873be" name="Changes" comment="Completed tutorial10-1">
-      <change afterPath="$PROJECT_DIR$/tutorial10-2/src/main/java/edu/byui/apj/storefront/tutorial102/accessingDataMongoDb/AccessingDataMongoDbApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tutorial10-2/src/main/java/edu/byui/apj/storefront/tutorial102/accessingDataMongoDb/Customer/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tutorial10-2/src/main/java/edu/byui/apj/storefront/tutorial102/accessingMongoDbRest/AccessingMongoDbRestApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tutorial10-2/src/main/java/edu/byui/apj/storefront/tutorial102/accessingMongoDbRest/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tutorial10-2/src/main/java/edu/byui/apj/storefront/tutorial102/accessingMongoDbRest/PersonRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="0dd7ed9c-4274-41c8-9072-b5e3eee873be" name="Changes" comment="Completed tutorial10-2. Both work independantly.">
+      <change afterPath="$PROJECT_DIR$/web/src/main/java/edu/byui/apj/storefront/web/controller/TradingCardController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/java/edu/byui/apj/storefront/web/model/TradingCard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/src/main/java/edu/byui/apj/storefront/web/service/TradingCardClientService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/edu/byui/apj/storefront/api/controller/TradingCardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/edu/byui/apj/storefront/api/controller/TradingCardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/edu/byui/apj/storefront/api/service/TradingCardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/edu/byui/apj/storefront/api/service/TradingCardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/edu/byui/apj/storefront/web/StaticController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/java/edu/byui/apj/storefront/web/WebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/edu/byui/apj/storefront/web/WebApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/index.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,11 +74,14 @@
     "Spring Boot.AccessingDataJpaApplication.executor": "Run",
     "Spring Boot.AccessingDataMongoDbApplication.executor": "Run",
     "Spring Boot.AccessingMongoDbRestApplication.executor": "Run",
+    "Spring Boot.AnimalClientApplication.executor": "Run",
+    "Spring Boot.ApiApplication.executor": "Run",
     "Spring Boot.Tutorial101Application (2).executor": "Run",
     "Spring Boot.Tutorial101Application (3).executor": "Run",
     "Spring Boot.Tutorial101Application.executor": "Run",
     "Spring Boot.Tutorial102Application.executor": "Run",
     "Spring Boot.Tutorial81Application.executor": "Run",
+    "Spring Boot.WebApplication.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "/Users/calebwolfe/Desktop/BYUI/APJ/apj-storefront/tutorial9-2/src/test/java/edu/byui/apj/storefront/tutorial92",
@@ -82,10 +91,13 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "MavenSettings",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="edu.byui.apj.storefront.tutorial102.accessingMongoDbRest" />
@@ -101,7 +113,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.WebApplication">
     <configuration default="true" type="AZURE_FUNCTION_SUPPORT" factoryName="Run Functions">
       <option name="appName" />
       <option name="appServicePlanName" />
@@ -250,7 +262,8 @@
       <workItem from="1741730015335" duration="5117000" />
       <workItem from="1741741462129" duration="724000" />
       <workItem from="1741900215012" duration="717000" />
-      <workItem from="1741909118257" duration="2505000" />
+      <workItem from="1741909118257" duration="2836000" />
+      <workItem from="1741912983298" duration="6792000" />
     </task>
     <task id="LOCAL-00001" summary="Did prove.">
       <option name="closed" value="true" />
@@ -308,7 +321,23 @@
       <option name="project" value="LOCAL" />
       <updated>1741742161485</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Completed tutorial10-2. Both work independantly.">
+      <option name="closed" value="true" />
+      <created>1741911924441</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1741911924441</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Completed tutorial10-2. Both work independantly.">
+      <option name="closed" value="true" />
+      <created>1741911948314</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1741911948314</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -319,7 +348,8 @@
     <MESSAGE value="Completed tutorial9-1" />
     <MESSAGE value="Completed tutorial9-2" />
     <MESSAGE value="Completed tutorial10-1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Completed tutorial10-1" />
+    <MESSAGE value="Completed tutorial10-2. Both work independantly." />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed tutorial10-2. Both work independantly." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
