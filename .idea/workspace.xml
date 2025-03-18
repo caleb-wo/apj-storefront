@@ -7,21 +7,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0dd7ed9c-4274-41c8-9072-b5e3eee873be" name="Changes" comment="Completed tutorial10-2. Both work independantly.">
-      <change afterPath="$PROJECT_DIR$/web/src/main/java/edu/byui/apj/storefront/web/controller/TradingCardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/java/edu/byui/apj/storefront/web/model/TradingCard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/src/main/java/edu/byui/apj/storefront/web/service/TradingCardClientService.java" afterDir="false" />
+    <list default="true" id="0dd7ed9c-4274-41c8-9072-b5e3eee873be" name="Changes" comment="Tried to finish week 9 prove. Having issues.">
+      <change afterPath="$PROJECT_DIR$/tutorial11-1/src/main/java/edu/byui/wdd231/tutorial111/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tutorial11-1/src/main/java/edu/byui/wdd231/tutorial111/hello/Email.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tutorial11-1/src/main/java/edu/byui/wdd231/tutorial111/hello/Receiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/edu/byui/apj/storefront/api/controller/TradingCardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/edu/byui/apj/storefront/api/controller/TradingCardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/edu/byui/apj/storefront/api/service/TradingCardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/edu/byui/apj/storefront/api/service/TradingCardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/edu/byui/apj/storefront/web/StaticController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/edu/byui/apj/storefront/web/WebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/edu/byui/apj/storefront/web/WebApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/resources/static/index.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +72,7 @@
     "Spring Boot.Tutorial101Application (3).executor": "Run",
     "Spring Boot.Tutorial101Application.executor": "Run",
     "Spring Boot.Tutorial102Application.executor": "Run",
+    "Spring Boot.Tutorial111Application.executor": "Run",
     "Spring Boot.Tutorial81Application.executor": "Run",
     "Spring Boot.WebApplication.executor": "Run",
     "git-widget-placeholder": "main",
@@ -113,7 +106,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.WebApplication">
+  <component name="RunManager">
     <configuration default="true" type="AZURE_FUNCTION_SUPPORT" factoryName="Run Functions">
       <option name="appName" />
       <option name="appServicePlanName" />
@@ -205,6 +198,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Tutorial111Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="tutorial11-1" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="edu.byui.wdd231.tutorial111.Tutorial111Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tutorial81Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="tutorial8-1" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="edu.byui.apj.storefront.tutorial81.Tutorial81Application" />
@@ -263,7 +263,9 @@
       <workItem from="1741741462129" duration="724000" />
       <workItem from="1741900215012" duration="717000" />
       <workItem from="1741909118257" duration="2836000" />
-      <workItem from="1741912983298" duration="6792000" />
+      <workItem from="1741912983298" duration="6866000" />
+      <workItem from="1742325726614" duration="851000" />
+      <workItem from="1742329792297" duration="1776000" />
     </task>
     <task id="LOCAL-00001" summary="Did prove.">
       <option name="closed" value="true" />
@@ -337,7 +339,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741911948314</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Tried to finish week 9 prove. Having issues.">
+      <option name="closed" value="true" />
+      <created>1742325746040</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1742325746041</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,7 +359,8 @@
     <MESSAGE value="Completed tutorial9-2" />
     <MESSAGE value="Completed tutorial10-1" />
     <MESSAGE value="Completed tutorial10-2. Both work independantly." />
-    <option name="LAST_COMMIT_MESSAGE" value="Completed tutorial10-2. Both work independantly." />
+    <MESSAGE value="Tried to finish week 9 prove. Having issues." />
+    <option name="LAST_COMMIT_MESSAGE" value="Tried to finish week 9 prove. Having issues." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
