@@ -7,13 +7,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0dd7ed9c-4274-41c8-9072-b5e3eee873be" name="Changes" comment="Tutorial 11-2">
-      <change afterPath="$PROJECT_DIR$/tutorial12-1/src/main/java/edu/byui/apj/storefront/tutorial121/HomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tutorial12-1/src/test/java/edu/byui/apj/storefront/tutorial121/HttpRequestTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tutorial12-1/src/test/java/edu/byui/apj/storefront/tutorial121/SmokeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tutorial12-1/src/test/java/edu/byui/apj/storefront/tutorial121/TestingWebApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="0dd7ed9c-4274-41c8-9072-b5e3eee873be" name="Changes" comment="Tutorial 12-1">
+      <change afterPath="$PROJECT_DIR$/tutorial12-2/src/main/java/edu/byui/apj/storefront/tutorial122/MvcConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tutorial12-2/src/main/java/edu/byui/apj/storefront/tutorial122/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tutorial12-2/src/main/resources/templates/hello.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tutorial12-2/src/main/resources/templates/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tutorial12-2/src/main/resources/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,6 +75,7 @@
     "Spring Boot.Tutorial111Application.executor": "Run",
     "Spring Boot.Tutorial112Application.executor": "Run",
     "Spring Boot.Tutorial121Application.executor": "Run",
+    "Spring Boot.Tutorial122Application.executor": "Run",
     "Spring Boot.Tutorial81Application.executor": "Run",
     "Spring Boot.WebApplication.executor": "Run",
     "git-widget-placeholder": "main",
@@ -158,6 +158,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Tutorial122Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="tutorial12-2" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="edu.byui.apj.storefront.tutorial122.Tutorial122Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -192,7 +199,8 @@
       <workItem from="1742329792297" duration="1849000" />
       <workItem from="1742417261245" duration="897000" />
       <workItem from="1742503601757" duration="2375000" />
-      <workItem from="1742847886607" duration="858000" />
+      <workItem from="1742847886607" duration="1121000" />
+      <workItem from="1743013446695" duration="704000" />
     </task>
     <task id="LOCAL-00001" summary="Did prove.">
       <option name="closed" value="true" />
@@ -290,7 +298,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742506059506</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Tutorial 12-1">
+      <option name="closed" value="true" />
+      <created>1742849004565</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1742849004565</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,7 +321,8 @@
     <MESSAGE value="Tried to finish week 9 prove. Having issues." />
     <MESSAGE value="Tutorial 11-1" />
     <MESSAGE value="Tutorial 11-2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tutorial 11-2" />
+    <MESSAGE value="Tutorial 12-1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tutorial 12-1" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
